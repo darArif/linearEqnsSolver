@@ -79,7 +79,7 @@ int main(void)
         for (i=0; i<m; i++)
         {
             //This Variable Sized Array is for Storing Entered Equations Temporarily
-            char strEqn[30*n]; //Since Varible Sized Stack Arrays are Supported in C(from C99)
+            char strEqn[30*n]; //Since Variable Sized Stack Arrays are Supported in C(from C99)
 
             char s[30]; //This Array is for Temporarily Storing Tokens Extracted from strEqn String
 
@@ -463,9 +463,9 @@ void g_elim(float **ref, int rows, int colms)
     
 void swap(float *p1, float *p2)
 {
-    *p1 = *p1 + *p2;
-    *p2 = *p1 - *p2;
-    *p1 = *p1 - *p2; 
+   float temp = *p1;
+   *p1 = *p2;
+   *p2 = temp;
 }
 
 int rank_mtrx(float **ref, int rows, int colms)
